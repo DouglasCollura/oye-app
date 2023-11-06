@@ -1,0 +1,7 @@
+{
+  "name": "oye",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
