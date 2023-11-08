@@ -1,0 +1,111 @@
+.banner {
+  background: url('../../assets/images/team/banner_team.JPG');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    padding: 170px 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+
+    .title {
+      font-size: 45px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.section-doit {
+  background-color: var(--oye-green);
+
+  .content-img {
+    background: url('../../assets/images/backlinewhite.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 10px 20px;
+    padding-top: 80px;
+
+    #img_1 {
+      overflow: hidden;
+      border-top-right-radius: 40px;
+    }
+
+    #img_2 {
+      margin-top: 80px;
+      overflow: hidden;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+    }
+  }
+
+  .content-text {
+    padding: 20px;
+  }
+}
+
+
+.section-build {
+  background-color: white;
+  padding: 20px;
+  *{
+    color: black;
+  }
+
+  .section {
+    margin:10px 0px;
+    display: grid;
+    gap: 10px;
+  }
+
+
+  .content-img {
+    background: url('../../assets/images/backlinewhite.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    padding: 40px;
+    .img{
+      width: 90%;
+      overflow: hidden;
+      justify-self: center;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+    }
+  }
+
+}
+
+
+.content-todo{
+  padding: 5px;
+  *{
+    color: black;
+  }
+  display: grid;
+  gap: 10px;
+  .y-video{
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+
+  .list{
+    display: grid;
+    padding: 20px 0px;
+  }
+}
+
+mat-accordion{
+  display: grid;
+  gap: 20px;
+}
+
+footer{
+  background-color: white;
+}

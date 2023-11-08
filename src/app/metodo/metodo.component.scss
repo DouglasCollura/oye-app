@@ -1,0 +1,69 @@
+.banner {
+  background: url('../../assets/images/metodo/banner_metodo.JPG');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    padding: 170px 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+
+    .title {
+      font-size: 45px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+
+.section-info {
+  display: grid;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card-buy{
+  background-color: var(--oye-green);
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: grid;
+  gap: 15px;
+  *{
+    line-height: normal;
+  }
+  h1{
+    font-size: 24px;
+  }
+
+  #geometry{
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    width: 100px;
+  }
+}
+
+.section-contact{
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  padding: 25px 20px;
+  h1{
+    font-size: 24px;
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+footer{
+  background-color: white;
+}

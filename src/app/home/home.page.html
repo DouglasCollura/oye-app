@@ -1,20 +1,104 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="temp-home">
+  <div class="header">
+    <img src="/assets/images/logo-oye.png" id="logo" alt="">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="content-icons">
+      <ion-icon name="mail" class="icon"></ion-icon>
+      <ion-icon name="call" class="icon"></ion-icon>
+    </div>
+
+  </div>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <div class="swiper-container-banner">
+      <swiper class="custom-swiper" [config]="config">
+        <ng-template swiperSlide *ngFor="let item of [1,1,1]">
+          <div class="container-swiper">
+            <div class="img">
+              <img src="/assets/images/home/banner_1.JPG" alt="">
+            </div>
+            <div class="info">
+              <h1 class="font-400">Trabajaremos para elevar tu empresa al siguiente nivel.</h1>
+
+              <button class="btn">saber más</button>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+
+      <img class="geometry" src="/assets/images/geometry-1.svg" alt="">
+    </div>
+
+    <section class="section">
+      <div class="content-img" id="img_1">
+        <img class="img" src="/assets/images/home/section_1.png" alt="">
+      </div>
+      <div class="content-img" id="img_2">
+        <img class="img" src="/assets/images/home/section_2.JPG" alt="">
+      </div>
+    </section>
+    <div class="conte-help">
+      <h4 class="font-400">CÓMO TE AYUDAMOS</h4>
+      <h1>Diseñamos estrategias para que tu empresa alcance su potencial. Nos enfocamos contigo en que obtengas
+        resultados objetivos y medibles.</h1>
+    </div>
+
+    <section class="content-swiper-todo">
+      <h4 class="font-400 text-green">QUÉ HACEMOS</h4>
+
+      <h1 class="font-400 ">Analizamos las necesidades de tu empresa para aportar soluciones</h1>
+
+      <swiper class="custom-swiper" [config]="config">
+        <ng-template swiperSlide>
+          <div class="container-swiper">
+            <div class="content-img" routerLink="/consulta" >
+              <img src="/assets/images/home/swiper_1.JPG" alt="">
+              <h1 class="font-400">Consultoría</h1>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="content-img" routerLink="/formacion" >
+              <img src="/assets/images/home/swiper_2.png" alt="">
+              <h1 class="font-400">Formación</h1>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="content-img" routerLink="/team" >
+              <img src="/assets/images/home/swiper_3.JPG" alt="">
+              <h1 class="font-400">Team Building</h1>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="content-img" routerLink="/programas" >
+              <img src="/assets/images/home/swiper_4.JPG" alt="">
+              <h1 class="font-400">Programas</h1>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="content-img" routerLink="/metodo" >
+              <img src="/assets/images/metodo/banner_metodo.JPG" alt="">
+              <h1 class="font-400">Nuestros métodos</h1>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </section>
+
+    <footer>
+        <img src="/assets/images/backlinefull.svg" alt="">
+    </footer>
   </div>
 </ion-content>
