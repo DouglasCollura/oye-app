@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import SwiperCore, { Navigation } from "swiper";
 import Swiper, { Pagination, Autoplay, EffectFade, Controller, Thumbs } from 'swiper';
 import { SwiperOptions } from 'swiper';
-
+import { SwiperComponent } from 'swiper/angular';
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 Swiper.use([Pagination, Autoplay, EffectFade]);
 
@@ -11,10 +11,17 @@ Swiper.use([Pagination, Autoplay, EffectFade]);
   templateUrl: './consulta.component.html',
   styleUrls: ['./consulta.component.scss'],
 })
-export class ConsultaComponent  implements OnInit {
+export class ConsultaComponent  implements OnInit, AfterViewInit {
 
-  constructor() { }
+  @ViewChild('swiperOpt') swiperOpt!: SwiperComponent;
 
+  constructor(
+  ) { }
+
+
+  ngAfterViewInit() {
+    this.swiperOpt.swiperRef.autoplay.running = true;
+  }
 
   config: SwiperOptions = {
     slidesPerView: 'auto',
@@ -22,7 +29,7 @@ export class ConsultaComponent  implements OnInit {
     loop: true,
     navigation: false,
     autoplay: {
-      delay: 1000,
+      delay: 2000,
       disableOnInteraction: false
     }
   }

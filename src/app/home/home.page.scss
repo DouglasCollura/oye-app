@@ -1,5 +1,7 @@
+
 .temp-home {
   padding: 0px 5px;
+  --background:white !important
 }
 
 ion-content {
@@ -156,4 +158,14 @@ ion-content {
 
 footer{
   background-color: white;
+}
+
+
+::ng-deep .swiper {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.swiper {
+  z-index: 0 !important;
 }
