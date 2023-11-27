@@ -4,13 +4,8 @@ import { ConsultaComponent } from './consulta.component';
 import { HeaderComponent } from '../header/header.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HeaderComponent,
-    children: [
-      { path: '', component: ConsultaComponent },
-    ]
-  }
+
+  { path: '', component: ConsultaComponent },
 ];
 
 @NgModule({

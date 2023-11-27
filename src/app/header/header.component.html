@@ -1,8 +1,55 @@
 <ion-content>
-  <ion-header>
+  <ion-menu type="overlay" content-id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <div class="logo-menu">
+          <img src="/assets/images/logo-oye.png" width="40" id="logo" alt="">
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-menu-toggle>
+        <button class="btn-menu" [class.selected]="currentRoute == '/home'" routerLink="/home">
+          Inicio
+        </button>
+
+        <mat-accordion>
+          <mat-expansion-panel (click)="$event.stopPropagation()">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h2 class="text-blue">Servicios</h2>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <button class="btn-menu-panel" [class.selected]="currentRoute == '/formacion'" routerLink="/formacion"
+              (click)="closeMenu()">Formación consultiva</button>
+            <button class="btn-menu-panel" [class.selected]="currentRoute == '/consulta'" routerLink="/consulta"
+              (click)="closeMenu()">Consultoría estratégica</button>
+            <button class="btn-menu-panel" [class.selected]="currentRoute == '/team'" routerLink="/team"
+              (click)="closeMenu()">Team Building</button>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (click)="$event.stopPropagation()">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h2 class="text-blue">Nosotros</h2>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <button class="btn-menu-panel" [class.selected]="currentRoute == '/programas'" routerLink="/programas"
+              (click)="closeMenu()">Programas</button>
+            <button class="btn-menu-panel" [class.selected]="currentRoute == '/metodo'" routerLink="/metodo"
+              (click)="closeMenu()">Nuestros métodos</button>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+
+  <ion-header id="main-content">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-icon (click)="back()" slot="start" class="icon-back" name="chevron-back-outline"></ion-icon>
+        <ion-back-button text="" defaultHref="/home" class="icon-back" *ngIf="!hideBack"></ion-back-button>
+        <!-- <ion-icon (click)="back()" *ngIf="!hideBack" slot="start" class="icon-back" name="chevron-back-outline"></ion-icon> -->
+        <ion-menu-button></ion-menu-button>
         <img src="/assets/images/logo-oye.png" width="40" id="logo" alt="">
       </ion-buttons>
 
@@ -13,5 +60,6 @@
     </ion-toolbar>
   </ion-header>
   <router-outlet></router-outlet>
-</ion-content>
 
+
+</ion-content>

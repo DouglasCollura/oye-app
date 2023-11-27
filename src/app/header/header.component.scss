@@ -26,3 +26,65 @@ ion-toolbar {
 .icon-back{
   color: var(--oye-blue) !important;
 }
+
+ion-menu-button {
+  font-size: 2rem; /* Increase the font size to your desired value */
+  color: var(--oye-blue) !important;
+}
+
+.logo-menu{
+  display: grid;
+  justify-content: center;
+}
+
+.btn-menu{
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  font-size: 1.3rem;
+  border: none;
+  color: var(--oye-blue);
+  font-weight: 500 !important;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  background-color: white;
+
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+
+  &-panel{
+    @extend .btn-menu;
+    font-size: 1rem !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+  }
+}
+
+
+::ng-deep .mat-expansion-panel-body{
+  padding: 0px !important;
+
+}
+
+::ng-deep.mat-expansion-panel-spacing{
+  margin: 0px !important;
+}
+
+::ng-deep #background-content{
+  background: white !important;
+}
+
+.selected{
+  background-color: var(--oye-blue-light) !important;
+  color: var(--oye-blue) !important;
+}
+
+
+footer{
+  background-color: white;
+}

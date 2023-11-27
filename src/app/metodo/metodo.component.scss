@@ -71,3 +71,16 @@
 footer{
   background-color: white;
 }
+
+.custom-swiper-metodo{
+  ::ng-deep.swiper-slide{
+    max-width: 220px;
+  }
+  .container-swiper{
+    max-width: 220px;
+    .content-img{
+      max-width: 200px;
+    }
+  }
+
+}

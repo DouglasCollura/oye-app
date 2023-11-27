@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true" class="temp-home">
-  <div class="header">
+  <!-- <div class="header">
     <img src="/assets/images/logo-oye.png" id="logo" alt="">
 
     <div class="content-icons">
@@ -7,13 +7,13 @@
       <a href="tel:659868454"><ion-icon name="call" class="icon"></ion-icon> </a>
     </div>
 
-  </div>
+  </div> -->
 
   <div id="container">
 
     <div class="swiper-container-banner">
       <swiper class="custom-swiper" [config]="config" #swiperBanner >
-        <ng-template swiperSlide *ngFor="let item of [1,1,1]">
+        <ng-template swiperSlide >
           <div class="container-swiper">
             <div class="img">
               <img src="/assets/images/home/banner_1.JPG" alt="">
@@ -21,7 +21,43 @@
             <div class="info">
               <h1 class="font-400">Trabajaremos para elevar tu empresa al siguiente nivel.</h1>
 
-              <button class="btn">saber más</button>
+              <button routerLink="/consulta" class="btn">saber más</button>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="img">
+              <img src="/assets/images/home/banner_2.jpg" alt="">
+            </div>
+            <div class="info">
+              <h1 class="font-400">Mejoraremos tus resultados potenciando tu equipo humano.</h1>
+              <button routerLink="/consulta" class="btn">saber más</button>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="img">
+              <img src="/assets/images/home/banner_3.jpg" alt="">
+            </div>
+            <div class="info">
+              <h1 class="font-400">Aumentaremos tu productividad mejorando los procesos.</h1>
+              <button routerLink="/consulta" class="btn">saber más</button>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template swiperSlide >
+          <div class="container-swiper">
+            <div class="img">
+              <img src="/assets/images/home/banner_4.jpg" alt="">
+            </div>
+            <div class="info">
+              <h1 class="font-400">Nuestros libros recogen algunos de nuestros aprendizajes y conocimientos. Compártelos con nosotros.</h1>
+              <button routerLink="/consulta" class="btn">saber más</button>
             </div>
           </div>
         </ng-template>
@@ -98,7 +134,7 @@
     </section>
 
     <footer>
-        <img src="/assets/images/backlinefull.svg" alt="">
+      <img src="/assets/images/footer-geometry.svg" alt="">
     </footer>
   </div>
 </ion-content>

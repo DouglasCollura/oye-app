@@ -32,12 +32,47 @@
   <div class="card-buy">
     <h1 class="font-400">Nuestros libros recogen algunos de nuestros aprendizajes y conocimientos. Compártelos con
       nosotros.</h1>
-    <button class="btn justify-self-start">quiero comprarlos</button>
+    <button (click)="openWeb()" class="btn justify-self-start">quiero comprarlos</button>
 
     <img id="geometry" src="/assets/images/geometry-1.svg" alt="">
   </div>
 
   <section class="section-contact">
+
+    <swiper class="custom-swiper-metodo" [config]="config" #swiperOpt>
+      <ng-template swiperSlide>
+        <div class="container-swiper">
+          <div class="content-img" >
+            <img src="/assets/images/metodo/mentor.png" alt="">
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="container-swiper">
+          <div class="content-img" >
+            <img src="/assets/images/metodo/mentor-digital.png" alt="">
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="container-swiper">
+          <div class="content-img" >
+            <img src="/assets/images/metodo/comercial.png" alt="">
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="container-swiper">
+          <div class="content-img" >
+            <img src="/assets/images/metodo/comercial-digital.png" alt="">
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+
     <h1 class="font-500 text-blue"> Comienza el cambio. ¿Hablamos? </h1>
     <a href="mailto:info@oportunidadesyestrategias.com" class="btn">
       <ion-icon name="mail" class="icon"></ion-icon>
@@ -49,6 +84,6 @@
     </a>
   </section>
   <footer>
-    <img src="/assets/images/backlinefull.svg" alt="">
+    <img src="/assets/images/footer-geometry.svg" alt="">
   </footer>
 </ion-content>

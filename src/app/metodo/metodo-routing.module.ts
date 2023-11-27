@@ -4,12 +4,9 @@ import { MetodoComponent } from './metodo.component';
 import { HeaderComponent } from '../header/header.component';
 
 const routes: Routes = [{
+
   path: '',
-  component: HeaderComponent,
-  children: [{
-    path: '',
-    component: MetodoComponent
-  }]
+  component: MetodoComponent
 }];
 
 @NgModule({
