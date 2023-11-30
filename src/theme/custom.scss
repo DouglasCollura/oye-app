@@ -328,3 +328,8 @@ h5, p {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+
+
+[class^="temp-"] > * {
+  margin: 0px 10px !important
+}
